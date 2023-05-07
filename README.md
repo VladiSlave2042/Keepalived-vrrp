@@ -23,25 +23,24 @@ virtual_ipaddress {
 }
 ![ip a](https://github.com/VladiSlave2042/Keepalived-vrrp/blob/main/img/ip%20a%20MASTER.png)
 ### Слейв нода:
-""java
 vrrp_instance failover_test {
-state BACKUP
-interface enp0s8
-virtual_router_id 10
-priority 110
-advert_int 4
-authentication {
-auth_type AH
-auth_pass 1111
-}
-unicast_peer {
-192.168.10.2
-}
-virtual_ipaddress {
-192.168.10.50 dev enp0s8 label enp0s8:vip
-}
-}
-""
+    state BACKUP
+    interface enp0s8
+    virtual_router_id 10
+    priority 110
+    advert_int 4
+    authentication {
+        auth_type AH
+        auth_pass 1111
+        }
+        unicast_peer {
+            192.168.10.2
+            }
+            virtual_ipaddress {
+                192.168.10.50 dev enp0s8 label enp0s8:vip
+                }
+                }
+
 ![ip a](https://github.com/VladiSlave2042/Keepalived-vrrp/blob/main/img/ip%20a%20SLAVE.png)
 
 ---
