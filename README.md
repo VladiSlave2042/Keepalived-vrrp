@@ -21,8 +21,9 @@ virtual_ipaddress {
 192.168.10.50 dev enp0s8 label enp0s8:vip
 }
 }
-![ip a]()
+![ip a](https://github.com/VladiSlave2042/Keepalived-vrrp/blob/main/img/ip%20a%20MASTER.png)
 ### Слейв нода:
+""java
 vrrp_instance failover_test {
 state BACKUP
 interface enp0s8
@@ -40,7 +41,8 @@ virtual_ipaddress {
 192.168.10.50 dev enp0s8 label enp0s8:vip
 }
 }
-![ip a]()
+""
+![ip a](https://github.com/VladiSlave2042/Keepalived-vrrp/blob/main/img/ip%20a%20SLAVE.png)
 
 ---
 ## Задание 2
